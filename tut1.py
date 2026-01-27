@@ -31,5 +31,31 @@
 # ingredients.sort()
 # print(f"thi is the sorted lsit {ingredients}")
 
+# l1=[2,3,4]
+# print(l1)
+# l2=l1
+# print(l2)
+# l1[0]=44
+# print(l1)
+# print(l2)
+# l2[0]=2
+# print(l1)
+# print(l2)
+
+# p1=[1,2,3]
+# p2=p1
+# print(p1)
+# print(p2)
+# p1[0]=55
+# print(p1)
+# print(p2)
+# p2[0]=96
+# print(p1)
+# print(p2)
+# p2=[1,2,3]
+# print(p1)
+# print(p2)
+
+
 
 
