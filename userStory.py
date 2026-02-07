@@ -106,8 +106,19 @@
 
 # Readibility
 
-def calculate_bill(cups,price_per_cup):
-    return cups*price_per_cup
+# def calculate_bill(cups,price_per_cup):
+#     return cups*price_per_cup
 
-my_bill=calculate_bill(3,8)
-print(my_bill)
+# my_bill=calculate_bill(3,8)
+# print(my_bill)
+
+# improving tracibiity
+
+def add_val(price,vat_rate):
+    return price*(100+vat_rate)/100
+
+orders=[100,150,200]
+
+for price in orders:
+    final_amount=add_val(price,10)
+    print(f"original price is {price} ,with vat {final_amount}")
