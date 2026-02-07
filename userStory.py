@@ -135,16 +135,30 @@
 
 # enclosing scope
 
-def chai_counter():
-    chai_order="lemon"
-    def print_order():
-        chai_order="Ginger"
-        print("inner" ,chai_order)
-    print_order()
-    print('outer',chai_order)
+# def chai_counter():
+#     chai_order="lemon"
+#     def print_order():
+#         chai_order="Ginger"
+#         print("inner" ,chai_order)
+#     print_order()
+#     print('outer',chai_order)
 
-chai_order='tulsi'
-chai_counter()
-print("Global", chai_order)
+# chai_order='tulsi'
+# chai_counter()
+# print("Global", chai_order)
+
+# #Non scope
+
+def update_order():
+    chai_type='elaichi'
+    def kitchen():
+        nonlocal chai_type
+        chai_type='kesar'
+    kitchen()
+    print("After kitchen update", chai_type)
+
+update_order()
+
+global
 
 
