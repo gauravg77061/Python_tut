@@ -125,12 +125,26 @@
 
 # local scope
 
-def serve_chai():
-    chai_type="Masala chai"
-    print(f"Inside the function {chai_type}")
+# def serve_chai():
+#     chai_type="Masala chai"
+#     print(f"Inside the function {chai_type}")
 
-chai_type="Lemon Tea"
-print(f"Outside the function {chai_type}")
-serve_chai()
+# chai_type="Lemon Tea"
+# print(f"Outside the function {chai_type}")
+# serve_chai()
+
+# enclosing scope
+
+def chai_counter():
+    chai_order="lemon"
+    def print_order():
+        chai_order="Ginger"
+        print("inner" ,chai_order)
+    print_order()
+    print('outer',chai_order)
+
+chai_order='tulsi'
+chai_counter()
+print("Global", chai_order)
 
 
