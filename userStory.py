@@ -16,12 +16,42 @@
 
 #user story - 3 
 
-cup_size=input("enter the size of cup").lower()
+# cup_size=input("enter the size of cup").lower()
 
-if cup_size=="small":
-    print(f"the price of small cup is 10")
-elif cup_size =="medium":
-    print("the price of medium cup is 15Rs")
-else:
-    print("The price of large cup is 20")
+# if cup_size=="small":
+#     print(f"the price of small cup is 10")
+# elif cup_size =="medium":
+#     print("the price of medium cup is 15Rs")
+# else:
+#     print("The price of large cup is 20")
 
+# staff=[("Amit",16),("Raj",15),("Gaurav",13),("Jyoti",15)]
+
+# for name,age in staff:
+#     if age >= 18 :
+#         print(f"{name} is eligible")
+#         break
+#     else:
+#         print(f"No one is eligble")
+
+# print("you are outside of this loop")
+
+# user story dictionary in place of match
+
+users=[
+    {"id":1, "total": 150 , "coupon": "p20"},
+    {"id":2, "total": 100 , "coupon": "F10"},
+    {"id":3, "total":200 , "coupon": "P50"},
+    
+]
+
+discounts ={
+    "p20":(0.2,0),
+    "F10":(0.5,0),
+    "P50":(0,10),
+}
+
+for user in users:
+    percent,fixed=discounts.get(user["coupon"],(0,0))
+    discount = user["total"]*percent+fixed
+    print(f"{user["id"]} paid {user["total"]} and will get discout{discount} on next shopping")
