@@ -114,11 +114,23 @@
 
 # improving tracibiity
 
-def add_val(price,vat_rate):
-    return price*(100+vat_rate)/100
+# def add_val(price,vat_rate):
+#     return price*(100+vat_rate)/100
 
-orders=[100,150,200]
+# orders=[100,150,200]
 
-for price in orders:
-    final_amount=add_val(price,10)
-    print(f"original price is {price} ,with vat {final_amount}")
+# for price in orders:
+#     final_amount=add_val(price,10)
+#     print(f"original price is {price} ,with vat {final_amount}")
+
+# local scope
+
+def serve_chai():
+    chai_type="Masala chai"
+    print(f"Inside the function {chai_type}")
+
+chai_type="Lemon Tea"
+print(f"Outside the function {chai_type}")
+serve_chai()
+
+
