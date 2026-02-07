@@ -38,20 +38,47 @@
 
 # user story dictionary in place of match
 
-users=[
-    {"id":1, "total": 150 , "coupon": "p20"},
-    {"id":2, "total": 100 , "coupon": "F10"},
-    {"id":3, "total":200 , "coupon": "P50"},
+# users=[
+#     {"id":1, "total": 150 , "coupon": "p20"},
+#     {"id":2, "total": 100 , "coupon": "F10"},
+#     {"id":3, "total":200 , "coupon": "P50"},
     
-]
+# ]
 
-discounts ={
-    "p20":(0.2,0),
-    "F10":(0.5,0),
-    "P50":(0,10),
-}
+# discounts ={
+#     "p20":(0.2,0),
+#     "F10":(0.5,0),
+#     "P50":(0,10),
+# }
 
-for user in users:
-    percent,fixed=discounts.get(user["coupon"],(0,0))
-    discount = user["total"]*percent+fixed
-    print(f"{user["id"]} paid {user["total"]} and will get discout{discount} on next shopping")
+# for user in users:
+#     percent,fixed=discounts.get(user["coupon"],(0,0))
+#     discount = user["total"]*percent+fixed
+#     print(f"{user["id"]} paid {user["total"]} and will get discout{discount} on next shopping")
+
+#     function user storty
+
+def print_order(name,chai_type):
+    print(f"{name} ordered {chai_type} chai!")
+
+
+print_order("Aman","masala")
+print_order("Hitesh","Ginger")
+
+#user story - splitting code into function
+
+def fetchingSales_Data():
+    print("fetching sales data")
+
+def filteringSales_Data():
+    print("filtering sales data")
+
+def summarizing_Data():
+    print("summarizing sales data")
+
+def generate_report():
+    fetchingSales_Data()
+    filteringSales_Data()
+    summarizing_Data()
+
+generate_report()
