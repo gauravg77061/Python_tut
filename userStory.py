@@ -58,27 +58,48 @@
 
 #     function user storty
 
-def print_order(name,chai_type):
-    print(f"{name} ordered {chai_type} chai!")
+# def print_order(name,chai_type):
+#     print(f"{name} ordered {chai_type} chai!")
 
 
-print_order("Aman","masala")
-print_order("Hitesh","Ginger")
+# print_order("Aman","masala")
+# print_order("Hitesh","Ginger")
 
-#user story - splitting code into function
+# #user story - splitting code into function
 
-def fetchingSales_Data():
-    print("fetching sales data")
+# def fetchingSales_Data():
+#     print("fetching sales data")
 
-def filteringSales_Data():
-    print("filtering sales data")
+# def filteringSales_Data():
+#     print("filtering sales data")
 
-def summarizing_Data():
-    print("summarizing sales data")
+# def summarizing_Data():
+#     print("summarizing sales data")
 
-def generate_report():
-    fetchingSales_Data()
-    filteringSales_Data()
-    summarizing_Data()
+# def generate_report():
+#     fetchingSales_Data()
+#     filteringSales_Data()
+#     summarizing_Data()
 
-generate_report()
+# generate_report()
+
+#hiding implementtation 
+
+def get_input():
+    print("Getting user inpunt")
+
+def validate_input():
+    print("validating user input")
+
+def save_to__db():
+    print("Saving to the data base")
+
+# yaha par implementain ek function mein wrap kar 
+#leneg simply ek print se dikha rahe ki ho gya 
+
+def register__user():
+    get_input()
+    validate_input()
+    save_to__db()
+
+register__user()
