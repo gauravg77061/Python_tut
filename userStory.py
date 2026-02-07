@@ -172,11 +172,18 @@
 # front_desk()
 # print("Final global chai:" ,chai_type)
 
-def special_chai(*ingre,**extras):
-    print("Inggre",ingre)
-    print("Extras",extras)
+# def special_chai(*ingre,**extras):
+#     print("Inggre",ingre)
+#     print("Extras",extras)
 
-special_chai("cinnaman","cardmon",sweetner="honey",foam="yes")
+# special_chai("cinnaman","cardmon",sweetner="honey",foam="yes")
+
+def chai_order(order=[]):
+    order.append("Masala")
+    print(order)
+
+chai_order()
+chai_order()
 
        
 
