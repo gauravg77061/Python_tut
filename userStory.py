@@ -161,16 +161,23 @@
 
 # global
 
-chai_type='plain'
+# chai_type='plain'
 
-def front_desk():
-    def kitchen():
-        global chai_type
-        chai_type='Irani'
-    kitchen()
+# def front_desk():
+#     def kitchen():
+#         global chai_type
+#         chai_type='Irani'
+#     kitchen()
 
-front_desk()
-print("Final global chai:" ,chai_type)
+# front_desk()
+# print("Final global chai:" ,chai_type)
+
+def special_chai(*ingre,**extras):
+    print("Inggre",ingre)
+    print("Extras",extras)
+
+special_chai("cinnaman","cardmon",sweetner="honey",foam="yes")
+
        
 
 
