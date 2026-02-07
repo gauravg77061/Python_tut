@@ -178,12 +178,46 @@
 
 # special_chai("cinnaman","cardmon",sweetner="honey",foam="yes")
 
-def chai_order(order=[]):
-    order.append("Masala")
-    print(order)
+# def chai_order(order=[]):
+#     order.append("Masala")
+#     print(order)
 
-chai_order()
-chai_order()
+# chai_order()
+# chai_order()
+
+# def make_chai():
+#   #  return "Here is your masala chai"
+#      print("Here isyour masala tea")
+# return_value=make_chai()
+# print(return_value)
+
+#return none 
+
+# def idle_chai_wala():
+#     pass
+
+# print(idle_chai_wala())
+
+#returning one value 
+
+# def sold_cup():
+#     return 120
+# ans=sold_cup()
+# print(ans)
+
+# def chai_status(cups_left):
+#     if cups_left == 0 :
+#         return  "sorry,chai over"
+#     return "chai is ready"
+
+# print(chai_status(8))
+# print(chai_status(0))
+
+# def chai_reports():
+#     return 20,100
+# sold,remaining =chai_reports()
+# print(sold)
+# print(remaining)
 
        
 
