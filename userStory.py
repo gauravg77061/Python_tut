@@ -219,6 +219,32 @@
 # print(sold)
 # print(remaining)
 
+
+# def pure_chai(cups):
+#     return cups*10
+
+# total_chai=0
+
+# def impure_chai(cups):
+#     global total_chai
+#     total_chai+=cups
+
+# def pour_chai(n):
+#     print(n)
+#     if n==0 :
+#         return "All cups poured"
+#     return pour_chai(n-1)
+   
+# ans=pour_chai(3)
+# print(ans)
+
+arr=["Gaurav","Aman","Rachit","Gaurav"]
+
+arr2=list(filter(lambda a: a!="Gaurav",arr))
+print(arr2)
+
+
+
        
 
 
