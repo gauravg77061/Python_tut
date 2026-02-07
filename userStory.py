@@ -149,16 +149,29 @@
 
 # #Non scope
 
-def update_order():
-    chai_type='elaichi'
+# def update_order():
+#     chai_type='elaichi'
+#     def kitchen():
+#         nonlocal chai_type
+#         chai_type='kesar'
+#     kitchen()
+#     print("After kitchen update", chai_type)
+
+# update_order()
+
+# global
+
+chai_type='plain'
+
+def front_desk():
     def kitchen():
-        nonlocal chai_type
-        chai_type='kesar'
+        global chai_type
+        chai_type='Irani'
     kitchen()
-    print("After kitchen update", chai_type)
 
-update_order()
+front_desk()
+print("Final global chai:" ,chai_type)
+       
 
-global
 
 
