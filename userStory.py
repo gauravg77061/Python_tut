@@ -85,21 +85,29 @@
 
 #hiding implementtation 
 
-def get_input():
-    print("Getting user inpunt")
+# def get_input():
+#     print("Getting user inpunt")
 
-def validate_input():
-    print("validating user input")
+# def validate_input():
+#     print("validating user input")
 
-def save_to__db():
-    print("Saving to the data base")
+# def save_to__db():
+#     print("Saving to the data base")
 
-# yaha par implementain ek function mein wrap kar 
-#leneg simply ek print se dikha rahe ki ho gya 
+# # yaha par implementain ek function mein wrap kar 
+# #leneg simply ek print se dikha rahe ki ho gya 
 
-def register__user():
-    get_input()
-    validate_input()
-    save_to__db()
+# def register__user():
+#     get_input()
+#     validate_input()
+#     save_to__db()
 
-register__user()
+# register__user()
+
+# Readibility
+
+def calculate_bill(cups,price_per_cup):
+    return cups*price_per_cup
+
+my_bill=calculate_bill(3,8)
+print(my_bill)
