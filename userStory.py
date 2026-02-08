@@ -471,23 +471,45 @@
 
 #constructor init 
 
-class cha_order:
-    temparature="hot"
-    def __init__(self,type_,size):
-        self.type=type_
-        self.size=size
+# class cha_order:
+#     temparature="hot"
+#     def __init__(self,type_,size):
+#         self.type=type_
+#         self.size=size
 
-    def summary(self):
-        return f"{self.size}ml {self.type} chai"
+#     def summary(self):
+#         return f"{self.size}ml {self.type} chai"
     
-order=cha_order("Masala",200)
-print(order.summary())
-print(order.temparature)
-print(order.type)
-print(order.size)
+# order=cha_order("Masala",200)
+# print(order.summary())
+# print(order.temparature)
+# print(order.type)
+# print(order.size)
 
+#inheritance 
 
+class BaseChai:
+    def __init__(self,type_):
+        self.type=type_
 
+    def prepare(self):
+        print(f"preparing {self.type} chai...")
+
+class Masala_chai(BaseChai):
+    def add_spices(self):
+        print("Adding cardamon,ginger and cloves")
+
+class chaiShope:
+    chai_cls=BaseChai
+
+    def __init__(self):
+        self.chai=self.chai_cls("Regular")
+
+    def serve(self):
+        print(f"serving {self.chai.type} chai in the shop")
+
+obj =chaiShope()
+print(obj.serve())
 
 
 
