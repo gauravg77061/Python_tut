@@ -297,18 +297,34 @@
 # for cup in stall:
 #     print(cup)
 
-#infinite generators
+# #infinite generators
 
-def infinite_chai():
-    cnt=1
-    while True:
-        yield f"Refil {cnt}"
-        cnt+=1
+# def infinite_chai():
+#     cnt=1
+#     while True:
+#         yield f"Refil {cnt}"
+#         cnt+=1
 
-refil=infinite_chai()
+# refil=infinite_chai()
 
-for _ in range(6):
-    print(next(refil))
+# for _ in range(6):
+#     print(next(refil))
+
+# # send alue to generator 
+
+# def chai_customer():
+#     print("Welcome ! what chai would you like !")
+
+#     order =yield
+#     while True:
+#         print(f"preparing: {order}")
+#         order=yield
+
+# stall=chai_customer()
+# print(stall)
+# next(stall)
+
+# stall.send("Masal chai")
   
 
 
