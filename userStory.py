@@ -390,24 +390,37 @@
 
 # brew_chai("Masala chai")
 
-from functools import wraps
-def require_admin(func):
+# from functools import wraps
+# def require_admin(func):
 
-    @wraps(func)
-    def wrapper(user_role):
+#     @wraps(func)
+#     def wrapper(user_role):
         
-        if user_role != 'admin':
-            print("Access denied: admin only")
-        else:
+#         if user_role != 'admin':
+#             print("Access denied: admin only")
+#         else:
      
-            return func(user_role)
-    return wrapper #return fro outer function 
-@require_admin
-def access_tea_inventory(role):
-    print("Access granted to tea inventory")
+#             return func(user_role)
+#     return wrapper #return fro outer function 
+# @require_admin
+# def access_tea_inventory(role):
+#     print("Access granted to tea inventory")
 
-access_tea_inventory("user")
-access_tea_inventory("admin")
+# access_tea_inventory("user")
+# access_tea_inventory("admin")
+
+class chai:
+    pass
+
+class chaiTime:
+    pass
+
+print(type(chai))
+ginger_tea=chai()
+
+print(type(ginger_tea))
+print(type(ginger_tea) is chai)
+print(type(ginger_tea) is chaiTime)
 
 
 
