@@ -282,20 +282,35 @@
 
 #genertors
 
-def serve_chai():
-    yield "cup 1: masala chai"
-    yield "cup 2: ginger chai"
+# def serve_chai():
+#     yield "cup 1: masala chai"
+#     yield "cup 2: ginger chai"
 
-stall=serve_chai()
+# stall=serve_chai()
 
-print(stall)
+# print(stall)
 
-print(next(stall))
+# print(next(stall))
 
-print(next(stall))
+# print(next(stall))
 
 # for cup in stall:
 #     print(cup)
+
+#infinite generators
+
+def infinite_chai():
+    cnt=1
+    while True:
+        yield f"Refil {cnt}"
+        cnt+=1
+
+refil=infinite_chai()
+
+for _ in range(6):
+    print(next(refil))
+  
+
 
 
 
