@@ -460,14 +460,34 @@
 # print("after deletion cup property",cutting.cup)
 
 #methods
-class chaicup:
-    size=150 #ml
+# class chaicup:
+#     size=150 #ml
 
-    def describe(self):
-        return f"A{self.size} ml cup chai"
-cup=chaicup()
-print(cup.describe())
-print(chaicup.describe(cup))
+#     def describe(self):
+#         return f"A{self.size} ml cup chai"
+# cup=chaicup()
+# print(cup.describe())
+# print(chaicup.describe(cup))
+
+#constructor init 
+
+class cha_order:
+    temparature="hot"
+    def __init__(self,type_,size):
+        self.type=type_
+        self.size=size
+
+    def summary(self):
+        return f"{self.size}ml {self.type} chai"
+    
+order=cha_order("Masala",200)
+print(order.summary())
+print(order.temparature)
+print(order.type)
+print(order.size)
+
+
+
 
 
 
