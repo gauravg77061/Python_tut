@@ -441,24 +441,33 @@
 
 # variable = attribut when go inside the obect
 
-class chai:
-    temperature = 'hot'
-    strength = 'strong'
+# class chai:
+#     temperature = 'hot'
+#     strength = 'strong'
 
-cutting =chai()
-print(cutting.temperature)
-cutting.temperature='mild'
-print("After changing",cutting.temperature)
-print("Direct look in the cllass",chai.temperature)
+# cutting =chai()
+# print(cutting.temperature)
+# cutting.temperature='mild'
+# print("After changing",cutting.temperature)
+# print("Direct look in the cllass",chai.temperature)
 
-del cutting.temperature
-print("after deletion whats the value",cutting.temperature)
+# del cutting.temperature
+# print("after deletion whats the value",cutting.temperature)
 
-cutting.cup='small'
-print("after adding property",cutting.cup)
-del cutting.cup
-print("after deletion cup property",cutting.cup)
+# cutting.cup='small'
+# print("after adding property",cutting.cup)
+# del cutting.cup
+# print("after deletion cup property",cutting.cup)
 
+#methods
+class chaicup:
+    size=150 #ml
+
+    def describe(self):
+        return f"A{self.size} ml cup chai"
+cup=chaicup()
+print(cup.describe())
+print(chaicup.describe(cup))
 
 
 
