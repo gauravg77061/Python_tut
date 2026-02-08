@@ -488,29 +488,73 @@
 
 #inheritance 
 
-class BaseChai:
-    def __init__(self,type_):
-        self.type=type_
+# class BaseChai:
+#     def __init__(self,type_):
+#         self.type=type_
 
-    def prepare(self):
-        print(f"preparing {self.type} chai...")
+#     def prepare(self):
+#         print(f"preparing {self.type} chai...")
 
-class Masala_chai(BaseChai):
-    def add_spices(self):
-        print("Adding cardamon,ginger and cloves")
+# class Masala_chai(BaseChai):
+#     def add_spices(self):
+#         print("Adding cardamon,ginger and cloves")
 
-class chaiShope:
-    chai_cls=BaseChai
+# class chaiShope:
+#     chai_cls=BaseChai
 
-    def __init__(self):
-        self.chai=self.chai_cls("Regular")
+#     def __init__(self):
+#         self.chai=self.chai_cls("Regular")
 
-    def serve(self):
-        print(f"serving {self.chai.type} chai in the shop")
+#     def serve(self):
+#         print(f"serving {self.chai.type} chai in the shop")
 
-obj =chaiShope()
-print(obj.serve())
+# obj =chaiShope()
+# print(obj.serve())
 
+#Accessing Base class 
+
+#
+
+# class chai:
+#     def __init__(self,type_,strength):
+#         self.type=type_
+#         self.strength=strength
+
+# # class GingerChai:
+# #     def __init__(self,type_,strength,spice_level):
+# #         self.type=type_
+# #         self.strength=strength
+# #         self.spice_level=spice_level ->there is lot of code duplication
+
+# #2nd way
+# # class GingerChai(chai):
+# #     def __init__(self, type_, strength,spice_level):
+# #         chai.__init__(self,type_, strength)
+# #         self.spice_level=spice_level
+
+# class Ginger(chai):
+#     def __init__(self, type_, strength,spice_level):
+#         super().__init__(type_, strength)
+#         self.spice_level=spice_level
+
+
+class A:
+    label="A: Base class"
+
+class B(A):
+    label="B:Masala blend"
+
+class C(A):
+    label="C: Herbal"
+
+class D(B,C):
+    pass
+
+cup = D()
+print(cup.label)
+
+
+        
 
 
        
