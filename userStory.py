@@ -328,37 +328,49 @@
 
 # yield fromand close the generators
 
-def local_chai():
-    yield "Masal chai"
-    yield "ginger chai"
+# def local_chai():
+#     yield "Masal chai"
+#     yield "ginger chai"
 
-def imported_chai():
-    yield "Matcha"
-    yield "Oolong"
+# def imported_chai():
+#     yield "Matcha"
+#     yield "Oolong"
 
-def full_menu():
-    yield from local_chai()
-    yield from imported_chai()
+# def full_menu():
+#     yield from local_chai()
+#     yield from imported_chai()
 
-for chai in full_menu():
-    print(chai)
-
-
-def chai_stall():
-    try:
-        while True:
-            order = yield "Waiting chai order"
-    except:
-        print("Stall closed,No more chai")
-
-stall =chai_stall()
-print(next(stall))
-stall.close()
-
-  
+# for chai in full_menu():
+#     print(chai)
 
 
+# def chai_stall():
+#     try:
+#         while True:
+#             order = yield "Waiting chai order"
+#     except:
+#         print("Stall closed,No more chai")
 
+# stall =chai_stall()
+# print(next(stall))
+# stall.close()
+
+# decorator 
+
+def my_decorator(fun):
+    def wrapper():
+        print("Befor function run")
+        fun()
+        print("After function runs")
+
+    return wrapper
+
+@my_decorator
+def greet():
+    print("Hello from decorator")
+
+greet()
+print(greet.__name__)
 
 
        
