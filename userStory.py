@@ -409,18 +409,36 @@
 # access_tea_inventory("user")
 # access_tea_inventory("admin")
 
-class chai:
-    pass
+# class chai:
+#     pass
 
-class chaiTime:
-    pass
+# class chaiTime:
+#     pass
 
-print(type(chai))
-ginger_tea=chai()
+# print(type(chai))
+# ginger_tea=chai()
 
-print(type(ginger_tea))
-print(type(ginger_tea) is chai)
-print(type(ginger_tea) is chaiTime)
+# print(type(ginger_tea))
+# print(type(ginger_tea) is chai)
+# print(type(ginger_tea) is chaiTime)
+
+class chai():
+    origin='India'
+
+chai.is_hot=True
+
+print(chai.origin)
+print(chai.is_hot)
+
+# creating object fromclass
+masala = chai()
+print(f" masala{masala.origin}")
+print(f"masala{masala.is_hot}")
+
+masala.is_hot=False
+print(f"masala{masala.is_hot}")
+print(f"coming from class {chai.is_hot}")
+
 
 
 
