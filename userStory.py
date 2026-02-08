@@ -357,20 +357,38 @@
 
 # decorator 
 
-def my_decorator(fun):
-    def wrapper():
-        print("Befor function run")
-        fun()
-        print("After function runs")
+# def my_decorator(fun):
+#     def wrapper():
+#         print("Befor function run")
+#         fun()
+#         print("After function runs")
 
-    return wrapper
+#     return wrapper
 
-@my_decorator
-def greet():
-    print("Hello from decorator")
+# @my_decorator
+# def greet():
+#     print("Hello from decorator")
 
-greet()
-print(greet.__name__)
+# greet()
+# print(greet.__name__)
+
+# from functools import wraps
+
+# def log_activity(func):
+#     @wraps(func)
+#     def wraper(*args,**kwargs):
+#         print("Before execution")
+#         result=func(*args,**kwargs)
+#         print("after result")
+#         return result
+         
+#     return wraper
+
+# @log_activity
+# def brew_chai(type,milk="no"):
+#     print(f"Brewing {type} chai and status of milk{milk}")
+
+# brew_chai("Masala chai")
 
 
        
