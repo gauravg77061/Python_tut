@@ -238,10 +238,65 @@
 # ans=pour_chai(3)
 # print(ans)
 
-arr=["Gaurav","Aman","Rachit","Gaurav"]
+# arr=["Gaurav","Aman","Rachit","Gaurav"]
 
-arr2=list(filter(lambda a: a!="Gaurav",arr))
-print(arr2)
+# arr2=list(filter(lambda a: a!="Gaurav",arr))
+# print(arr2)
+
+#comprehension
+
+# menu=['apple','mango','apple','amla','grapes']
+# apple=[fruit for fruit in menu if "app" in fruit]
+# print(apple)
+
+# favourites_chai=[
+#     'Masala chai','Green tea','Masala chai','Green tea'
+#     ,'Elaichi chai','Lemon tea'
+# ]
+
+# unique_chai={chai for chai in favourites_chai if len(chai)>8}
+
+# print(unique_chai)
+
+# recipes={
+#     "Masal chai":["ginger","cardmom","clove"],
+#     "Elaichi chai":["ginger","milk","clove"],
+#     "spicy chai":["ginger","black pepper","clove"]
+# }
+
+# unique_spices={spice  for ingredients in recipes.values() for
+#                 spice in 
+#                ingredients}
+# print(unique_spices)
+
+#dict
+
+# tea__prices={
+#     "Masala chai":40,
+#     "Green tea":50,
+#     "Lemon tea":200
+# }
+
+# new_tea_prices={tea:price/80 for tea,price in tea__prices.items()}
+# print(new_tea_prices)
+
+#genertors
+
+def serve_chai():
+    yield "cup 1: masala chai"
+    yield "cup 2: ginger chai"
+
+stall=serve_chai()
+
+print(stall)
+
+print(next(stall))
+
+print(next(stall))
+
+# for cup in stall:
+#     print(cup)
+
 
 
 
