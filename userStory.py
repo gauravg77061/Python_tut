@@ -422,22 +422,42 @@
 # print(type(ginger_tea) is chai)
 # print(type(ginger_tea) is chaiTime)
 
-class chai():
-    origin='India'
+# class chai():
+#     origin='India'
 
-chai.is_hot=True
+# chai.is_hot=True
 
-print(chai.origin)
-print(chai.is_hot)
+# print(chai.origin)
+# print(chai.is_hot)
 
-# creating object fromclass
-masala = chai()
-print(f" masala{masala.origin}")
-print(f"masala{masala.is_hot}")
+# # creating object fromclass
+# masala = chai()
+# print(f" masala{masala.origin}")
+# print(f"masala{masala.is_hot}")
 
-masala.is_hot=False
-print(f"masala{masala.is_hot}")
-print(f"coming from class {chai.is_hot}")
+# masala.is_hot=False
+# print(f"masala{masala.is_hot}")
+# print(f"coming from class {chai.is_hot}")
+
+# variable = attribut when go inside the obect
+
+class chai:
+    temperature = 'hot'
+    strength = 'strong'
+
+cutting =chai()
+print(cutting.temperature)
+cutting.temperature='mild'
+print("After changing",cutting.temperature)
+print("Direct look in the cllass",chai.temperature)
+
+del cutting.temperature
+print("after deletion whats the value",cutting.temperature)
+
+cutting.cup='small'
+print("after adding property",cutting.cup)
+del cutting.cup
+print("after deletion cup property",cutting.cup)
 
 
 
