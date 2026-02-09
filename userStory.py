@@ -570,41 +570,60 @@
 # # print(cleaned)
 # print(cleaned_static)
 
-class chai_order:
+# class chai_order:
 
-    def __init__(self,tea_type,sweetness,size):
-        self.tea_type=tea_type
-        self.sweetness=sweetness
-        self.size=size
+#     def __init__(self,tea_type,sweetness,size):
+#         self.tea_type=tea_type
+#         self.sweetness=sweetness
+#         self.size=size
     
-    @classmethod
-    def from_dict(cls,order_data):
-        return cls(
-            order_data["tea_type"],
-            order_data["sweetness"],
-            order_data['size'],
-        )
+#     @classmethod
+#     def from_dict(cls,order_data):
+#         return cls(
+#             order_data["tea_type"],
+#             order_data["sweetness"],
+#             order_data['size'],
+#         )
     
-    @classmethod
-    def from_string(cls,order_string):
-        tea_type,sweetness,size=order_string.split("-")
-        return cls(tea_type,sweetness,size)
+#     @classmethod
+#     def from_string(cls,order_string):
+#         tea_type,sweetness,size=order_string.split("-")
+#         return cls(tea_type,sweetness,size)
     
-order1=chai_order.from_dict({
-    "tea_type":'masala',
-    "sweetness":"medium",
-    "size":"small"
-})
+# order1=chai_order.from_dict({
+#     "tea_type":'masala',
+#     "sweetness":"medium",
+#     "size":"small"
+# })
 
-obj=chai_order("masala","medium",'30')
-obj.tea_type='masala'
-print(obj.__dict__)
+# obj=chai_order("masala","medium",'30')
+# obj.tea_type='masala'
+# print(obj.__dict__)
 
 
-print(order1.__dict__)
+# print(order1.__dict__)
 
-order2=chai_order.from_string("Ginger-low-small")
-print(order2.__dict__)
+# order2=chai_order.from_string("Ginger-low-small")
+# print(order2.__dict__)
+
+class TeaLeaf:
+    def __init__(self,age):
+        self._age=age
+
+    @property
+    def age(self):
+        return self._age + 2
+    
+    @age.setter
+    def age(self,age):
+        if 1<=age <=5:
+            self.__age =age
+        else:
+            raise ValueError("Tea age below 5 years must b/w 1 and 5")
+
+leaf = TeaLeaf(2)
+leaf.age = 1
+print(leaf.age) 
         
 
 
