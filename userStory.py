@@ -538,20 +538,37 @@
 #         self.spice_level=spice_level
 
 
-class A:
-    label="A: Base class"
+# class A:
+#     label="A: Base class"
 
-class B(A):
-    label="B:Masala blend"
+# class B(A):
+#     label="B:Masala blend"
 
-class C(A):
-    label="C: Herbal"
+# class C(A):
+#     label="C: Herbal"
 
-class D(B,C):
-    pass
+# class D(B,C):
+#     pass
 
-cup = D()
-print(cup.label)
+# cup = D()
+# print(cup.label)
+
+class chaiUtils:
+    @staticmethod
+    def clean_ingredients(text):
+        return [item.strip() for item in text.split(",")]
+
+raw='water , milk , ginger , honey'
+
+# obj=chaiUtils()
+# cleaned=obj.clean_ingredients(raw)
+# print(cleaned)
+
+# by static method
+
+cleaned_static=chaiUtils.clean_ingredients(raw)
+# print(cleaned)
+print(cleaned_static)
 
 
         
