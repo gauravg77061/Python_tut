@@ -553,24 +553,58 @@
 # cup = D()
 # print(cup.label)
 
-class chaiUtils:
-    @staticmethod
-    def clean_ingredients(text):
-        return [item.strip() for item in text.split(",")]
+# class chaiUtils:
+#     @staticmethod
+#     def clean_ingredients(text):
+#         return [item.strip() for item in text.split(",")]
 
-raw='water , milk , ginger , honey'
+# raw='water , milk , ginger , honey'
 
-# obj=chaiUtils()
-# cleaned=obj.clean_ingredients(raw)
-# print(cleaned)
+# # obj=chaiUtils()
+# # cleaned=obj.clean_ingredients(raw)
+# # print(cleaned)
 
-# by static method
+# # by static method
 
-cleaned_static=chaiUtils.clean_ingredients(raw)
-# print(cleaned)
-print(cleaned_static)
+# cleaned_static=chaiUtils.clean_ingredients(raw)
+# # print(cleaned)
+# print(cleaned_static)
+
+class chai_order:
+
+    def __init__(self,tea_type,sweetness,size):
+        self.tea_type=tea_type
+        self.sweetness=sweetness
+        self.size=size
+    
+    @classmethod
+    def from_dict(cls,order_data):
+        return cls(
+            order_data["tea_type"],
+            order_data["sweetness"],
+            order_data['size'],
+        )
+    
+    @classmethod
+    def from_string(cls,order_string):
+        tea_type,sweetness,size=order_string.split("-")
+        return cls(tea_type,sweetness,size)
+    
+order1=chai_order.from_dict({
+    "tea_type":'masala',
+    "sweetness":"medium",
+    "size":"small"
+})
+
+obj=chai_order("masala","medium",'30')
+obj.tea_type='masala'
+print(obj.__dict__)
 
 
+print(order1.__dict__)
+
+order2=chai_order.from_string("Ginger-low-small")
+print(order2.__dict__)
         
 
 
