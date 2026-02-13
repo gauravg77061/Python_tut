@@ -634,20 +634,35 @@
         
 # print("Hello world ")
 
-def serve(flavour):
-    try:
-        print(f"Preparing {flavour} chai ...")
-        if flavour == 'unknown':
-            raise ValueError("We dont know that flavur")
-    except ValueError as e:
-        print("Error:", e)
-    else:
-        print(f"{flavour}")
-    finally:
-         print("Next customer")
+# def serve(flavour):
+#     try:
+#         print(f"Preparing {flavour} chai ...")
+#         if flavour == 'unknown':
+#             raise ValueError("We dont know that flavur")
+#     except ValueError as e:
+#         print("Error:", e)
+#     else:
+#         print(f"{flavour}")
+#     finally:
+#          print("Next customer")
 
-serve('unknown')
-serve('masala')
+# serve('unknown')
+# serve('masala')
+
+def process_order(item,quantity):
+    try:
+        price={"masala":20}[item]
+        cost=price*quantity
+        print(f"total cost is {cost}")
+    except KeyError:
+        print("sorry that chai is not avaiable")
+    except TypeError:
+        print("quanity must be in number ")
+
+process_order("ginger",2)
+process_order("masala","two")
+process_order("masala",2)
+
 
 
 
