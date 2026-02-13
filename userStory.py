@@ -649,19 +649,30 @@
 # serve('unknown')
 # serve('masala')
 
-def process_order(item,quantity):
-    try:
-        price={"masala":20}[item]
-        cost=price*quantity
-        print(f"total cost is {cost}")
-    except KeyError:
-        print("sorry that chai is not avaiable")
-    except TypeError:
-        print("quanity must be in number ")
+# multiple exceptions 
 
-process_order("ginger",2)
-process_order("masala","two")
-process_order("masala",2)
+# def process_order(item,quantity):
+#     try:
+#         price={"masala":20}[item]
+#         cost=price*quantity
+#         print(f"total cost is {cost}")
+#     except KeyError:
+#         print("sorry that chai is not avaiable")
+#     except TypeError:
+#         print("quanity must be in number ")
+
+# process_order("ginger",2)
+# process_order("masala","two")
+# process_order("masala",2)
+
+#own error 
+
+def brew_chai(flavour):
+    if flavour not in ["masala","ginger","elaichai"]:
+        raise ValueError("Unsupported chai flavour..")
+    print(f"brewing {flavour} chai...")
+
+brew_chai("mint")
 
 
 
