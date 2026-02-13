@@ -667,12 +667,22 @@
 
 #own error 
 
-def brew_chai(flavour):
-    if flavour not in ["masala","ginger","elaichai"]:
-        raise ValueError("Unsupported chai flavour..")
-    print(f"brewing {flavour} chai...")
+# def brew_chai(flavour):
+#     if flavour not in ["masala","ginger","elaichai"]:
+#         raise ValueError("Unsupported chai flavour..")
+#     print(f"brewing {flavour} chai...")
 
-brew_chai("mint")
+# brew_chai("mint")
+
+#custom excepton error 2 
+
+class OutofIngredientsError(Exception):
+    pass
+def make_chai(milk,sugar):
+    if milk == 0 or sugar == 0:
+        raise OutofIngredientsError("Missing milk or sugar")
+    print("chai is ready...")
+make_chai(0,1)
 
 
 
