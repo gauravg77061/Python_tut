@@ -35,3 +35,6 @@ class Range(BaseModel):
     def validate_date_ranges(cls,values):
         if values.start_date >=values.end_date:
             raise ValueError('end date must be after end date')
+
+user1=User(email='Gaurav@gmail.com')
+print(user1)

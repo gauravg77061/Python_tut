@@ -606,24 +606,24 @@
 # order2=chai_order.from_string("Ginger-low-small")
 # print(order2.__dict__)
 
-# class TeaLeaf:
-#     def __init__(self,age):
-#         self._age=age
+class TeaLeaf:
+    def __init__(self,age):
+        self._age=age
 
-#     @property
-#     def age(self):
-#         return self._age + 2
+    @property
+    def age(self):
+        return self._age + 2
     
-#     @age.setter
-#     def age(self,age):
-#         if 1<=age <=5:
-#             self.__age =age
-#         else:
-#             raise ValueError("Tea age below 5 years must b/w 1 and 5")
+    @age.setter
+    def age(self,age):
+        if 1<=age <=5:
+            self._age =age
+        else:
+            raise ValueError("Tea age below 5 years must b/w 1 and 5")
 
-# leaf = TeaLeaf(2)
+leaf = TeaLeaf(0)
 # leaf.age = 1
-# print(leaf.age) 
+print(leaf.age) 
 
 # chai_menu={"masala" :30,"ginger":40}
 
@@ -676,13 +676,13 @@
 
 #custom excepton error 2 
 
-class OutofIngredientsError(Exception):
-    pass
-def make_chai(milk,sugar):
-    if milk == 0 or sugar == 0:
-        raise OutofIngredientsError("Missing milk or sugar")
-    print("chai is ready...")
-make_chai(0,1)
+# class OutofIngredientsError(Exception):
+#     pass
+# def make_chai(milk,sugar):
+#     if milk == 0 or sugar == 0:
+#         raise OutofIngredientsError("Missing milk or sugar")
+#     print("chai is ready...")
+# make_chai(0,1)
 
 
 
